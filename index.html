@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eaf5ff"><title>XI-8 Classroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">8</div><div><b>XI-8</b><small>CLASSROOM</small></div></div>
+    <div class="side-label">MENU UTAMA</div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="overview"><span>◫</span> Ringkasan</button>
+      <button class="nav-item" data-page="students"><span>♙</span> Data Siswa</button>
+      <button class="nav-item" data-page="attendance"><span>✓</span> Absensi</button>
+      <button class="nav-item" data-page="schedule"><span>▦</span> Jadwal Pelajaran</button>
+      <button class="nav-item" data-page="announcements"><span>◉</span> Pengumuman</button>
+      <button class="nav-item" data-page="tasks"><span>▤</span> Tugas</button>
+      <button class="nav-item" data-page="gallery"><span>▧</span> Galeri</button>
+      <button class="nav-item" data-page="structure"><span>♧</span> Struktur Kelas</button>
+      <button class="nav-item" data-page="fund"><span>◈</span> Kas Kelas</button>
+      <button class="nav-item" data-page="aspirations"><span>✧</span> Aspirasi</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="online-dot"></div><span>Portal kelas aktif</span><button id="themeToggle" title="Ganti tema">◐</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="mobile-menu" id="mobileMenu">☰</button><div><div class="eyebrow">PORTAL INFORMASI KELAS</div><h1 id="pageTitle">Ringkasan</h1></div><div class="top-actions"><span class="date-pill" id="today"></span><button class="login-btn" id="loginOpen">Login Guru</button><button class="avatar" id="profileBtn">XI</button></div></header>
+    <section class="content" id="content"></section>
+    <footer>© <span id="year"></span> XI-8 Classroom <span>•</span> Dibuat untuk belajar dan berkembang bersama.</footer>
+  </main>
+</div>
+<div class="modal-backdrop" id="modal"><section class="modal"><button class="close" id="modalClose">×</button><div id="modalBody"></div></section></div>
+<div class="toast" id="toast"></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
